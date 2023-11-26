@@ -1,0 +1,75 @@
+
+Have player be able to choose their name
+
+Player starts at a cave
+    Choices:
+        Try finding something around
+        Search further in the cave [deeper]
+        Try to leave the cave [outside]
+
+    Find something:
+        Player find a rock, maybe use it for self-defense?
+            playerGotRock = True
+
+    Search further:
+        The player finds a sleeping giant bat!
+            Choices:
+                Sneak past it
+                Throw a rock at it (if playerGotRock = True)
+        
+        Sneak past:
+            You try to sneak past the bat, but step on a branch, waking the bat
+                Game Over
+
+        Throw rock:
+            Where do you aim the rock at?
+                Choices:
+                    The ears of the bat
+                    The body of the bat
+            
+            Throw at ears:
+                The bat wakes up in confusion, but the damage to its ears stuns it!
+                    Players goes deeper into the caves...
+                        End of game 1
+            
+            Throw at body:
+                The bat wakes up, shrugging off the hit
+                    Game Over
+    
+    Try to leave:
+        You stand in front a boulder that blocks your path
+            Choices:
+                Try to climb the boulder
+                Try to find a way around the boulder
+
+        Climb the boulder:
+            You prepare yourself as you start climbing the obstacle
+            Before you reach the top of the boulder, a giant spider blocks your way!
+                Choices:
+                    Keep climbing, ignoring the spider
+                    Throw the rock at the spider, distracting it (if playerGotRock = True)
+            
+            Keep climbing:
+                The spider is stunned by how you don't give a single fuck, and moves away from your path, instinctively
+                    Player finds the exit...
+                        End of game 2
+            
+            Throw rock:
+                The spider blocks the rock with one of its legs
+                    Game Over
+        
+        Find way around:
+            Trying to find a way around, you find yourself in a mossy area
+            However, not seeing where you're going, you slip on some moss and fall head first into a rock
+                Game Over
+                    
+
+How to get player input:
+    Use numbers (1, 2, 3) for each choice
+        Check if inputIsValid
+            is False, some funny remark, repeat
+    
+After player name is received
+    Narrator questions in italic, descriptions of surroundings no formatting
+    Oops, can't do italic, scratch that
+
